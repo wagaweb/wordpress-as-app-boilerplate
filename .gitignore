@@ -23,17 +23,6 @@ wp-content/themes/your-theme/assets/vendors
 wp-content/plugins/your-plugin/assets/vendors/*
 
 ############
-## VENDORS (w3tc)
-############
-#wp-content/advanced-cache.php
-#wp-content/object-cache.php
-#wp-content/db.php
-wp-content/cache
-wp-content/w3tc-config
-wp-content/plugins/w3tc-wp-loader.php
-nginx.conf
-
-############
 ## DEPLOY
 ############
 .rocketeer/logs
@@ -63,7 +52,6 @@ wp-content/fs-imports/*
 !wp-content/fs-imports/.gitkeep
 
 ############
-## CACHE
 ## CACHE
 ############
 wp-content/upgrade/*
