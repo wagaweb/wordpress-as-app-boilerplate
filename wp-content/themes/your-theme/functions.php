@@ -2,6 +2,8 @@
 define("YT_TEXTDOMAIN","fashionis"); //[EDIT HERE]
 
 $youtheme_includes = array(
+	'inc/Bootstrap_Nav_Menu.php',
+	'inc/Bootstrap_Page_Menu.php',
 	'inc/template-functions.php', //Custom template tags for this theme.
 	'inc/template-tags.php', //Custom template tags for this theme.
 	'inc/init.php', //Theme init
