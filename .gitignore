@@ -1,0 +1,128 @@
+############
+## CONFIGS
+############
+configs/cli-config.php
+
+############
+## VENDORS (composer)
+############
+vendor
+#WP
+wp
+#Plugins
+wp-content/plugins/*
+!wp-content/plugins/fashionis-shop
+node_modules
+bower_components
+
+############
+## VENDORS (bower)
+############
+wp-content/themes/fashionis/assets/vendors
+wp-content/plugins/fashionis-shop/assets/vendors/*
+!wp-content/plugins/fashionis-shop/assets/vendors/nanobar0.2.3
+
+############
+## VENDORS (w3tc)
+############
+#wp-content/advanced-cache.php
+#wp-content/object-cache.php
+#wp-content/db.php
+wp-content/cache
+wp-content/w3tc-config
+wp-content/plugins/w3tc-wp-loader.php
+nginx.conf
+
+############
+## DEPLOY
+############
+.rocketeer/logs
+
+############
+## COMPILED
+############
+wp-content/themes/fashionis/style.css
+wp-content/themes/fashionis/style.css.map
+wp-content/themes/fashionis/assets/src/js/bundle.js
+wp-content/themes/fashionis/assets/dist/js/main.min.js
+wp-content/themes/fashionis/assets/dist/js/main.min.js.map
+
+wp-content/plugins/fashionis-shop/assets/dist/css/style.css
+wp-content/plugins/fashionis-shop/assets/dist/css/style.css.map
+wp-content/plugins/fashionis-shop/assets/dist/js/fashionis-shop-plugin.min.js
+wp-content/plugins/fashionis-shop/assets/dist/js/fashionis-shop-plugin.min.js.map
+wp-content/plugins/fashionis-shop/assets/src/js/bundle.js
+
+############
+## UPLOADS
+############
+wp-content/uploads/*
+wp-content/fs-exports/*
+!wp-content/fs-exports/.gitkeep
+wp-content/fs-imports/*
+!wp-content/fs-imports/.gitkeep
+
+############
+## CACHE
+############
+wp-content/upgrade/*
+
+############
+## IDEs
+############
+
+*.pydevproject
+.project
+.metadata
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+.externalToolBuilders/
+*.launch
+.cproject
+.buildpath
+nbproject/
+
+############
+## OSes
+############
+
+[Tt]humbs.db
+[Dd]esktop.ini
+*.DS_store
+.DS_store?
+
+############
+## Commmons
+############
+
+node_modules/
+bower_components/
+builds/
+npm-debug.log
+Movefile
+
+############
+## Misc
+############
+
+_bak/
+bin/
+tmp/
+*.tmp
+*.bak
+*.bat
+*.log
+*.[Cc]ache
+*.cpr
+*.orig
+*.php.in
+.idea/
+temp/
+._*
+.Trashes
+.svn
+*.codekit
