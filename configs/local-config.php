@@ -25,7 +25,7 @@ define( 'DISALLOW_FILE_EDIT', true ); // disable editing theme/plugin files from
 
 define('WP_SITEURL', 'http://'.$_SERVER['HTTP_HOST']."/wp");
 define('WP_HOME', 'http://'.$_SERVER['HTTP_HOST']);
-define('WP_DEFAULT_THEME', 'fashionis');
+define('WP_DEFAULT_THEME', 'your-theme'); //[EDIT HERE]
 define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/wp-content');
 define('WP_CONTENT_URL', 'http://'.$_SERVER['HTTP_HOST'].'/wp-content');
 define('WP_PLUGIN_DIR', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/plugins');
