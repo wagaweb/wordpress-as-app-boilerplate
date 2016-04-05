@@ -5,7 +5,7 @@ This is a boilerplate we use internally to develop enterprise-scale applications
 The readme is still under construction.
 
 ## Usage
-- Download the repo files (don't clone)
+- Download the repo files (don't clone, you'll want to put the files under your vcs)
 - Put the files where you want
 - Edit those files with your settings:
 	- configs/**
