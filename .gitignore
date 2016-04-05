@@ -11,17 +11,16 @@ vendor
 wp
 #Plugins
 wp-content/plugins/*
-!wp-content/plugins/fashionis-shop
 !wp-content/plugins/index.php
+!wp-content/plugins/your-plugin/
 node_modules
 bower_components
 
 ############
 ## VENDORS (bower)
 ############
-wp-content/themes/fashionis/assets/vendors
-wp-content/plugins/fashionis-shop/assets/vendors/*
-!wp-content/plugins/fashionis-shop/assets/vendors/nanobar0.2.3
+wp-content/themes/your-theme/assets/vendors
+wp-content/plugins/your-plugin/assets/vendors/*
 
 ############
 ## VENDORS (w3tc)
@@ -42,17 +41,17 @@ nginx.conf
 ############
 ## COMPILED
 ############
-wp-content/themes/fashionis/style.css
-wp-content/themes/fashionis/style.css.map
-wp-content/themes/fashionis/assets/src/js/bundle.js
-wp-content/themes/fashionis/assets/dist/js/main.min.js
-wp-content/themes/fashionis/assets/dist/js/main.min.js.map
+wp-content/themes/your-theme/style.css
+wp-content/themes/your-theme/style.css.map
+wp-content/themes/your-theme/assets/src/js/bundle.js
+wp-content/themes/your-theme/assets/dist/js/main.min.js
+wp-content/themes/your-theme/assets/dist/js/main.min.js.map
 
-wp-content/plugins/fashionis-shop/assets/dist/css/style.css
-wp-content/plugins/fashionis-shop/assets/dist/css/style.css.map
-wp-content/plugins/fashionis-shop/assets/dist/js/fashionis-shop-plugin.min.js
-wp-content/plugins/fashionis-shop/assets/dist/js/fashionis-shop-plugin.min.js.map
-wp-content/plugins/fashionis-shop/assets/src/js/bundle.js
+wp-content/plugins/your-plugin/assets/dist/css/style.css
+wp-content/plugins/your-plugin/assets/dist/css/style.css.map
+wp-content/plugins/your-plugin/assets/dist/js/your-plugin-plugin.min.js
+wp-content/plugins/your-plugin/assets/dist/js/your-plugin-plugin.min.js.map
+wp-content/plugins/your-plugin/assets/src/js/bundle.js
 
 ############
 ## UPLOADS
@@ -64,6 +63,7 @@ wp-content/fs-imports/*
 !wp-content/fs-imports/.gitkeep
 
 ############
+## CACHE
 ## CACHE
 ############
 wp-content/upgrade/*
