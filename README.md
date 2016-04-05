@@ -7,11 +7,11 @@ The readme is still under construction.
 ## Usage
 - Download the repo files (don't clone, you'll want to put the files under your vcs)
 - Put the files where you want
-- Edit those files with your settings:
+- Edit these files with your settings:
 	- configs/**
 	- gulpfile.js
-	- wp-content/themes/your-theme/*
-	- wp-content/plugins/your-plugin/*
+	- wp-content/themes/your-theme/**
+	- wp-content/plugins/your-plugin/**
 - Edit "your-theme" and "your-plugin" directories to meet your needs.
 - Install dependencies with composer and npm
 - Run "gulp".
