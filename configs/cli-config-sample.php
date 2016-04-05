@@ -1,6 +1,6 @@
 <?php
-define('CLI_HTTP_HOST','shop.fispress.local'); //Change here to the correct url
-define('CLI_DOCUMENT_ROOT','/usr/share/nginx/html/shop'); //Change here to the correct path
+define('CLI_HTTP_HOST',''); //Change here to the correct url
+define('CLI_DOCUMENT_ROOT',''); //Change here to the correct path
 
 global $_SERVER;
 $_SERVER['HTTP_HOST'] = CLI_HTTP_HOST;
