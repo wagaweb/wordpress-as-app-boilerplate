@@ -68,13 +68,6 @@ if(!function_exists('yt_setup')):
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
-
-		// Set up the mobile detect cookie
-		if(fs_is_mobile()){
-			setcookie('fs_view_mode','mobile', strtotime( '+30 days' ));
-		}else{
-			setcookie('fs_view_mode','desktop', strtotime( '+30 days' ));
-		}
 	}
 endif; // fashionis_strap_setup
 add_action( 'after_setup_theme', 'yt_setup' );
