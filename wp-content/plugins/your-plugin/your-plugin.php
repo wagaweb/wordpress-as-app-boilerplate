@@ -2,12 +2,6 @@
 
 namespace YourNameSpace;
 
-use FisPressShop\includes\Activator;
-use FisPressShop\includes\Deactivator;
-use FisPressShop\includes\Error_Handler;
-use FisPressShop\includes\Exception_Handler;
-use FisPressShop\includes\Plugin;
-
 /**
  * The plugin bootstrap file
  *
