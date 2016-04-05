@@ -1,9 +1,9 @@
 var settings = {
-    yp_plugin: {
+    plugin: {
         slug: 'your-plugin',
         cwd: "wp-content/plugins/your-plugin"
     },
-    yt_theme: {
+    theme: {
         slug: 'your-theme',
         cwd: "wp-content/themes/your-theme"
     },
@@ -19,7 +19,7 @@ var settings = {
 };
 
 module.exports = {
-    shop_plugin: settings.shop_plugin,
-    shop_theme: settings.shop_theme,
+    your_plugin: settings.plugin,
+    your_theme: settings.theme,
     paths: settings.default_paths
 };

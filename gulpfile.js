@@ -20,17 +20,17 @@ var gulp = require('gulp'),
  * Compile CSS
  */
 gulp.task('compile_sass',function(){
-    var theme = gulp.src(config.paths.main_scss, { cwd: config.shop_theme.cwd })
+    var theme = gulp.src(config.paths.main_scss, { cwd: config.your_theme.cwd })
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(sourcemaps.write("."))
-        .pipe(gulp.dest('./',{ cwd: config.shop_theme.cwd }));
+        .pipe(gulp.dest('./',{ cwd: config.your_theme.cwd }));
 
-    var plugin = gulp.src(config.paths.main_scss, { cwd: config.shop_plugin.cwd })
+    var plugin = gulp.src(config.paths.main_scss, { cwd: config.your_plugin.cwd })
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(sourcemaps.write("."))
-        .pipe(gulp.dest('./assets/dist/css',{ cwd: config.shop_plugin.cwd }));
+        .pipe(gulp.dest('./assets/dist/css',{ cwd: config.your_plugin.cwd }));
 
     return merge(theme,plugin);
 });
@@ -39,19 +39,19 @@ gulp.task('compile_sass',function(){
  * Creates and minimize bundle.js
  */
 gulp.task('compile_js', ['browserify'] ,function(){
-    var theme = gulp.src(config.paths.bundle_js, { cwd: config.shop_theme.cwd })
+    var theme = gulp.src(config.paths.bundle_js, { cwd: config.your_theme.cwd })
         .pipe(sourcemaps.init())
         .pipe(uglify())
         .pipe(rename('main.min.js'))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./assets/dist/js', { cwd: config.shop_theme.cwd }));
+        .pipe(gulp.dest('./assets/dist/js', { cwd: config.your_theme.cwd }));
 
-    var plugin = gulp.src(config.paths.bundle_js, { cwd: config.shop_plugin.cwd })
+    var plugin = gulp.src(config.paths.bundle_js, { cwd: config.your_plugin.cwd })
         .pipe(sourcemaps.init())
         .pipe(uglify())
-        .pipe(rename(config.shop_plugin.slug+'.min.js'))
+        .pipe(rename(config.your_plugin.slug+'.min.js'))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./assets/dist/js', { cwd: config.shop_plugin.cwd }));
+        .pipe(gulp.dest('./assets/dist/js', { cwd: config.your_plugin.cwd }));
 
     return merge(theme,plugin);
 });
@@ -60,21 +60,21 @@ gulp.task('compile_js', ['browserify'] ,function(){
  * Browserify magic! Creates bundle.js
  */
 gulp.task('browserify', function(){
-    var theme = gulp.src(config.paths.main_js, { cwd: config.shop_theme.cwd })
+    var theme = gulp.src(config.paths.main_js, { cwd: config.your_theme.cwd })
         .pipe(browserify({
             insertGlobals : true,
             debug : true
         }))
         .pipe(rename('bundle.js'))
-        .pipe(gulp.dest('./assets/src/js', { cwd: config.shop_theme.cwd }));
+        .pipe(gulp.dest('./assets/src/js', { cwd: config.your_theme.cwd }));
 
-    var plugin = gulp.src(config.paths.main_js, { cwd: config.shop_plugin.cwd })
+    var plugin = gulp.src(config.paths.main_js, { cwd: config.your_plugin.cwd })
         .pipe(browserify({
             insertGlobals : true,
             debug : true
         }))
         .pipe(rename('bundle.js'))
-        .pipe(gulp.dest('./assets/src/js', { cwd: config.shop_plugin.cwd }));
+        .pipe(gulp.dest('./assets/src/js', { cwd: config.your_plugin.cwd }));
 
     return merge(theme,plugin);
 });
@@ -83,14 +83,14 @@ gulp.task('browserify', function(){
  * Bower Vendors
  */
 gulp.task('bower_install',function(){
-    var theme = bower({ cwd: config.shop_theme.cwd });
-    var plugin = bower({ cwd: config.shop_plugin.cwd });
+    var theme = bower({ cwd: config.your_theme.cwd });
+    var plugin = bower({ cwd: config.your_plugin.cwd });
     return merge(theme,plugin);
 });
 
 gulp.task('bower_update',function(){
-    var theme = bower({ cwd: config.shop_theme.cwd, cmd: 'update' });
-    var plugin = bower({ cwd: config.shop_plugin.cwd, cmd: 'update' });
+    var theme = bower({ cwd: config.your_theme.cwd, cmd: 'update' });
+    var plugin = bower({ cwd: config.your_plugin.cwd, cmd: 'update' });
     return merge(theme,plugin);
 });
 
@@ -102,19 +102,19 @@ gulp.task('rsync', function() {
     var theme = gulp.src(config.shop_theme.rsync.src)
         .pipe(rsync(config.shop_theme.rsync.options));
 
-    var plugin = gulp.src(config.shop_plugin.rsync.src)
-        .pipe(rsync(config.shop_plugin.rsync.options));
+    var plugin = gulp.src(config.your_plugin.rsync.src)
+        .pipe(rsync(config.your_plugin.rsync.options));
 
     return merge(theme,plugin);
 });
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
-    gulp.watch(config.shop_theme.cwd+"/assets/src/js/**/*",['compile_js']);
-    gulp.watch(config.shop_plugin.cwd+"/assets/src/js/**/*",['compile_js']);
+    gulp.watch(config.your_theme.cwd+"/assets/src/js/**/*",['compile_js']);
+    gulp.watch(config.your_plugin.cwd+"/assets/src/js/**/*",['compile_js']);
 
-    gulp.watch(config.shop_theme.cwd+"/assets/src/sass/**/*",['compile_sass']);
-    gulp.watch(config.shop_plugin.cwd+"/assets/src/sass/**/*",['compile_sass']);
+    gulp.watch(config.your_theme.cwd+"/assets/src/sass/**/*",['compile_sass']);
+    gulp.watch(config.your_plugin.cwd+"/assets/src/sass/**/*",['compile_sass']);
 });
 
 gulp.task('default', function(callback){
