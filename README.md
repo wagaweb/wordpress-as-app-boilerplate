@@ -10,6 +10,7 @@ The readme is still under construction.
 - Edit these files with your settings:
 	- configs/**
 	- gulpfile.js
+	- wp-cli.local.yml
 	- wp-content/themes/your-theme/**
 	- wp-content/plugins/your-plugin/**
 - Edit "your-theme" and "your-plugin" directories to meet your needs.
