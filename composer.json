@@ -1,0 +1,33 @@
+{
+    "name": "foo/bar",
+    "require": {
+      "johnpbloch/wordpress": "~4.4.0",
+      "wpackagist-plugin/akismet": "^3.1.5",
+      "wpackagist-plugin/query-monitor": "^2.8.1"
+    },
+    "license": "proprietary",
+    "authors": [
+      {
+        "name": "Foo Bar Baz",
+        "email": "foo@bar.baz"
+      }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+      "secure-http": false
+    },
+    "repositories": [
+      {
+        "type": "composer",
+        "url": "http://wpackagist.org"
+      }
+    ],
+    "extra": {
+        "wordpress-install-dir": "wp",
+        "installer-paths": {
+            "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "wp-content/themes/{$name}/": ["type:wordpress-theme"]
+        }
+    }
+}

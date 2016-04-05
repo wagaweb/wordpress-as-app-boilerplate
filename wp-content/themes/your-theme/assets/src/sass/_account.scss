@@ -1,0 +1,205 @@
+/*------------------------------------*\
+    #SECTION-INDEX
+\*------------------------------------*/
+
+/*    1. #SECTION-ACCOUNT
+/*    2. #SECTION-MODAL-LOGIN
+
+
+
+
+
+/*------------------------------------*\
+    #SECTION-ACCOUNT
+\*------------------------------------*/
+
+.page-template-tpl-account {
+  .site-main > article {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .breadcrumb-trail {
+    display: none;
+  }
+  .shipping_address #label_field {
+    display: none;
+  }
+}
+
+
+#wcContent .shop_table {
+  border:0;
+
+  td {
+    border: 0;
+
+    ul {
+      padding-left: 20px;
+    }
+  }
+
+  th {
+    border-right: 0;
+    border-left: 0;
+  }
+}
+.account-nav {
+  background-color: #2A2A2A;
+  text-align: center;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin: 0;
+      padding: 20px 20px 15px;
+      text-transform: uppercase;
+
+      a {
+        color: #fff;
+        font-size: 0.9em;
+      }
+    }
+
+    li.current-menu-item a:after {
+      content: ' ';
+      width: 50px;
+      height: 3px;
+      background-color:#fff;
+      display: block;
+      margin: 5px auto 0;
+    }
+  }
+}
+
+
+
+
+/*------------------------------------*\
+    #SECTION-MODAL-LOGIN
+\*------------------------------------*/
+
+.modal-login {
+  text-align: left;
+
+  form {
+    overflow: auto;
+  }
+
+  form#login {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .submit_button {
+    display: block;
+    width: 100%;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  label.error{
+    display: none !important;
+  }
+
+  input.error{
+    border: 1px solid #FF0000 !important;
+  }
+
+  a.close{
+    color: #000;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+
+  p.status{
+    margin: 0px 0 20px 0;
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .modal-login {
+
+
+    .modal-body {
+      padding: 15px 35px 35px;
+    }
+
+    form {
+      padding: 0 10px;
+    }
+
+    form#login {
+      border-bottom: none;
+    }
+
+    form#register {
+      border-left: 1px solid #ccc;
+      padding: 0 10px 0 40px;
+    }
+
+    .modal-header {
+      border-bottom: none;
+    }
+
+  }
+
+}
+
+
+// Popup Login
+
+/*
+.ajax-auth{
+  display: none;
+  z-index: 999;
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  width: 600px;
+  margin-left: -300px;
+  padding: 35px 25px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  text-align: left;
+
+  h3 {
+    margin-top: 0;
+  }
+  label.error{
+    display: none !important;
+  }
+  input.error{
+    border: 1px solid #FF0000 !important;
+  }
+  a.close{
+    color: #000;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  p.status{
+    margin: 0px 0 20px 0;
+    display: none;
+  }
+}
+
+.login_overlay{
+  height: 100%;
+  width: 100%;
+  background-color: #F6F6F6;
+  opacity: 0.9;
+  position: fixed;
+  z-index: 998;
+}
+
+*/

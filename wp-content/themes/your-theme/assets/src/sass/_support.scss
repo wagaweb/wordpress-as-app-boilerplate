@@ -1,0 +1,237 @@
+/*------------------------------------*\
+    #SECTION-INDEX
+\*------------------------------------*/
+
+/*    1. #SECTION-SUPPORT-MENU
+/*    2. #SECTION-PAYMENTS
+/*    3. #SECTION-DELIVERIES
+/*    4. #SECTION-RETURNS
+/*    5. #SECTION-SIZE-CHART
+/*    6. #SECTION-FAQ
+/*    7. #SECTION-CONTACTS
+
+
+
+
+
+/*------------------------------------*\
+    #SECTION-SUPPORT-MENU
+\*------------------------------------*/
+
+.menu-support-nav-container {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .menu-item a {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #e3e3e3;
+  }
+
+}
+
+
+
+/*------------------------------------*\
+    #SECTION-PAYMENTS
+\*------------------------------------*/
+
+h3.inline-title {
+  display: inline-block;
+  clear: both;
+  margin-right: 20px;
+}
+
+.payment-methods {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  vertical-align: middle;
+
+  li.cc {
+    background-image: none;
+    text-indent: 0;
+    margin: 0 10px 10px 0;
+    width: 32px;
+    height: auto;
+    display: inline-block;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  li.pp {
+    width: 76px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #SECTION-DELIVERIES
+\*------------------------------------*/
+
+.chart-table {
+  width: 100%;
+  clear: both;
+  margin: 0 0 20px 0;
+  padding: 0;
+
+  td {
+    margin: 10px 0;
+  }
+
+  td.column {
+    width: 20%;
+  }
+
+  h4 {
+    text-align: center;
+    font-size: 15px;
+    text-transform: none;
+    padding: 0 10px;
+    margin: 0 3px;
+    border-bottom: 1px solid #313131;
+    line-height: 160%;
+  }
+
+  p {
+    padding: 0 10px;
+    line-height: 250%;
+    text-align: center;
+  }
+}
+
+
+
+
+/*------------------------------------*\
+    #SECTION-RETURNS
+\*------------------------------------*/
+
+#warranty_form {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #f6f6f6;
+  border: 1px solid #e3e3e3;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #SECTION-SIZE-CHART
+\*------------------------------------*/
+
+#sizechart {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    border-bottom: none;
+    font-size: 100%;
+    width: 100%;
+    line-height: 300%;
+    text-transform: uppercase;
+  }
+
+  a.selected-chart {
+    font-weight: 600;
+  }
+}
+
+.full-chart {
+  overflow: auto !important;
+  display: none;
+
+  .size-head {
+    text-align: center;
+    margin: 30px 0 15px;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #SECTION-FAQ
+\*------------------------------------*/
+
+.faq-box {
+  margin-bottom: 15px;
+  overflow: auto;
+
+  h3 {
+
+  }
+
+  .widget-header {
+    position: relative;
+    float: left;
+    width: 100%;
+
+    h4.faq {
+      padding-left: 30px;
+      padding-bottom: 15px;
+      margin: 15px 0 0;
+      font-size: 15px;
+      cursor: pointer;
+      font-weight: 400;
+      border-bottom: 1px solid #e3e3e3;
+      text-transform: none;
+    }
+
+    h4.faq:before {
+      content:"\2b";
+      font-family: "Glyphicons Halflings";
+      font-size: 1em;
+      color: rgba(0,0,0,0.3);
+      margin-right: 7px;
+      position:absolute;
+      top: 15px;
+      left:0;
+    }
+
+    p {
+      margin-top: 10px;
+      color: #999;
+    }
+  }
+
+  .widget-content {
+    display: none;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    padding: 10px 0 0;
+    transition: all 0.25s ease;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #SECTION-CONTACTS
+\*------------------------------------*/
+
+.fs-contact-form span{
+  color: #C20104;
+}

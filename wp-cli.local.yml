@@ -1,0 +1,7 @@
+path: wp
+user: fs_admin
+debug: true
+skip-plugins:
+  - woocommerce-pdf-invoices-italian-add-on
+require:
+  - vendor/autoload.php

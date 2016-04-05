@@ -12,6 +12,7 @@ wp
 #Plugins
 wp-content/plugins/*
 !wp-content/plugins/fashionis-shop
+!wp-content/plugins/index.php
 node_modules
 bower_components
 

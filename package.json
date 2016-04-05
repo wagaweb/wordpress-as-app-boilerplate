@@ -1,0 +1,58 @@
+{
+  "name": "Fashionis_Strap",
+  "version": "0.1.0",
+  "author": "Waga",
+  "homepage": "http://www.waga.it/",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/waga/fashionis-strap"
+  },
+  "bugs": {
+    "url": "https://bitbucket.org/waga/fashionis-strap/issues?status=new&status=open"
+  },
+  "licenses": [
+    {
+      "type": "GPL",
+      "url": "http://www.gnu.org/licenses/gpl-2.0.html"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "browserify": "^10.1.1",
+    "browserify-shim": "^3.8.6",
+    "grunt": "~0.4.1",
+    "grunt-pot": "^0.1.2",
+    "gulp": "^3.8.11",
+    "gulp-bower": "0.0.10",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.5.2",
+    "gulp-copy": ">=0.0.2",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-less": "^3.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-rsync": "0.0.5",
+    "gulp-sass": "^2.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-zip": "^3.0.2",
+    "load-grunt-tasks": "^3.2.0",
+    "merge-stream": "^1.0.0",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.0.2"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "Nanobar": "./wp-content/plugins/fashionis-shop/assets/vendors/nanobar0.2.3/nanobar.js"
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery",
+    "backbone": "global:Backbone",
+    "underscore": "global:_"
+  }
+}
