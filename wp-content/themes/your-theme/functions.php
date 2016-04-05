@@ -1,5 +1,5 @@
 <?php
-define("YT_TEXTDOMAIN","fashionis"); //[EDIT HERE]
+define("YT_TEXTDOMAIN","your-textdomain"); //[EDIT HERE]
 
 $youtheme_includes = array(
 	'inc/Bootstrap_Nav_Menu.php',
