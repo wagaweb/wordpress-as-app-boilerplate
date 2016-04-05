@@ -1,19 +1,19 @@
 {
-  "name": "Fashionis_Strap",
+  "name": "YourTheme",
   "version": "0.1.0",
-  "author": "Waga",
-  "homepage": "http://www.waga.it/",
+  "author": "Foo Bar Baz",
+  "homepage": "http://www.foo.bar/",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/waga/fashionis-strap"
+    "url": ""
   },
   "bugs": {
-    "url": "https://bitbucket.org/waga/fashionis-strap/issues?status=new&status=open"
+    "url": ""
   },
   "licenses": [
     {
-      "type": "GPL",
-      "url": "http://www.gnu.org/licenses/gpl-2.0.html"
+      "type": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
     }
   ],
   "engines": {
