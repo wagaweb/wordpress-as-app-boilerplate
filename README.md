@@ -14,7 +14,7 @@ The readme is still under construction.
 	- wp-content/plugins/your-plugin/*
 - Edit "your-theme" and "your-plugin" directories to meet your needs.
 
-The theme is inspired by [_strap](https://github.com/ptbello/_strap) with bootstrap-sass instead of less. Is a bare-bone not fully functional theme, so you have to implement the theme yourself.
+The theme is inspired by [_strap](https://github.com/ptbello/_strap) with bootstrap-sass instead of less. It's a bare-bone not fully functional theme, so you have to implement the theme yourself.
 
 ## License
 The MIT License (MIT). Please see [License File](https://github.com/wagaweb/wordpress-as-app-boilerplate/blob/master/LICENSE) for more informations.
