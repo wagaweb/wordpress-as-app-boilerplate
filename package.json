@@ -47,9 +47,7 @@
       "browserify-shim"
     ]
   },
-  "browser": {
-    "Nanobar": "./wp-content/plugins/fashionis-shop/assets/vendors/nanobar0.2.3/nanobar.js"
-  },
+  "browser": {},
   "browserify-shim": {
     "jquery": "global:jQuery",
     "backbone": "global:Backbone",

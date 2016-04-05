@@ -20,7 +20,7 @@ function yt_scripts() {
 
 	$uri = defined("WP_DEBUG") && WP_DEBUG ? get_template_directory_uri() . '/assets/src/js/bundle.js' : get_template_directory_uri() . '/assets/dist/js/main.min.js';
 	$path = defined("WP_DEBUG") && WP_DEBUG ? get_template_directory() . '/assets/src/js/bundle.js' : get_template_directory() . '/assets/dist/js/main.min.js';
-	$deps = apply_filters("fispress/shop_theme/scripts/main/alter_deps",['jquery','bootstrap','backbone','underscore','jquery-validate']);
+	$deps = ['jquery','bootstrap','backbone','underscore'];
 	$version = filemtime($path);
 
 	wp_register_script( 'yt-main-js', $uri, $deps, $version, true );
@@ -28,3 +28,40 @@ function yt_scripts() {
 	wp_enqueue_script('yt-main-js');
 }
 add_action( 'wp_enqueue_scripts', 'yt_scripts', 99 );
+
+/**
+ * Register and includes vendor scripts
+ */
+function yt_vendor_scripts(){
+	$vendors_scripts = [
+		'bootstrap' => [
+			'uri' => get_template_directory_uri() . '/assets/vendors/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+			'path' => get_template_directory() . '/assets/vendors/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+			'deps' => ['jquery'],
+			'version' => '3.3.5',
+			'enqueue' => true,
+			'in_footer' => true
+		]
+	];
+
+	$to_enqueue = [];
+	foreach($vendors_scripts as $name => $param){
+		if(!file_exists($param['path'])) continue;
+		if(isset($param['version'])){
+			$version = $param['version'];
+		}else{
+			$version = filemtime($param['path']);
+		}
+		wp_register_script($name,$param['uri'],$param['deps'],$version,$param['in_footer']);
+		if(isset($param['enqueue']) && $param['enqueue']){
+			$to_enqueue[] = $name;
+		}
+	}
+
+	if(!empty($to_enqueue)){
+		foreach($to_enqueue as $s){
+			wp_enqueue_script($s);
+		}
+	}
+}
+add_action('wp_enqueue_scripts','yt_vendor_scripts', 98);
